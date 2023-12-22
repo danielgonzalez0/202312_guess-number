@@ -17,10 +17,10 @@ p, span, label, input{
 }
 
 .score{
-  @apply text-right py-2
+  @apply text-right py-2 border-neutral-400
 }
 
-.hidden{
+.hidden, #restart.hidden{
   display: none;
 }
 
@@ -30,9 +30,40 @@ p, span, label, input{
   padding: 5px 0;
 }
 
+#start{
+  @apply mt-4;
+}
+
   #instruction{
     color:rgba(100, 116, 139, 1);
     font-weight: 400;
     font-size: 14px;
-
   }
+  #error{
+    color: #b91c1c;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  #choices-board{
+   @apply relative py-5 rounded-md border-neutral-400 w-full border-solid border mt-8
+  }
+
+  #choices-board span:first-child {
+position: absolute;
+bottom: -25px;
+left: 0;
+}
+  #choices-board span:last-child {
+position: absolute;
+bottom: -25px;
+right: 0;
+}
+
+#game-result{
+  @apply mt-4;
+}
+#restart{
+  @apply mt-12 mx-auto block;
+}
+
